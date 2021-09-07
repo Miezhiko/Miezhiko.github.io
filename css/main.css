@@ -116,7 +116,7 @@ video::-webkit-media-controls-start-playback-button {
 
 .btn {
   display: block;
-  color: #000;
+  color: rgb(223, 27, 27);
   text-decoration: none;
   border: 1px solid;
   text-align: center;
@@ -140,7 +140,7 @@ video::-webkit-media-controls-start-playback-button {
 footer {
   position: relative;
   z-index: 1;
-  color: #000;
+  color: rgb(231, 14, 14);
 }
 
 footer a {
@@ -167,7 +167,7 @@ footer a:hover {
 
 @media (min-width: 1920px) {
   .btn {
-    border-color: rgba(0, 0, 0, .5);
+    border-color: rgba(236, 23, 23, 0.5);
   }
 
   .index__content {
@@ -393,7 +393,7 @@ footer a:hover {
 
 @media (min-width: 768px) and (max-width: 1919px) {
   footer a, .footer__city, .btn {
-    font-size: 14px;
+    font-size: 24px;
   }
 }
 
@@ -474,7 +474,7 @@ footer a:hover {
   }
 
   footer a, .footer__city, .btn {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   .footer__city-social-wrap {
