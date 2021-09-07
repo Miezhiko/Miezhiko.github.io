@@ -140,7 +140,7 @@ video::-webkit-media-controls-start-playback-button {
 footer {
   position: relative;
   z-index: 1;
-  color: rgb(207, 14, 14);
+  color: rgb(189, 19, 19);
 }
 
 footer a {
@@ -171,7 +171,7 @@ footer a:hover {
   }
 
   .index__content {
-    padding: 2.2vw 1.875vw;
+    padding: 2.2vw 2.2vw;
   }
 
   .index__main {
@@ -302,6 +302,7 @@ footer a:hover {
 
   .index__footer {
     margin-top: auto;
+    margin-bottom: auto;
   }
 
   .footer__city-social-wrap {
@@ -426,7 +427,7 @@ footer a:hover {
   }
 
   footer {
-    margin-top: 60px;
+    margin-top: 30px;
     margin-bottom: 60px;
   }
 
@@ -469,7 +470,7 @@ footer a:hover {
   }
 
   footer {
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 30px;
   }
 
