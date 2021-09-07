@@ -11,10 +11,6 @@
 </head>
 
 <body class="window-loading">
-  <iframe src="audio/silence.mp3" allow="autoplay" id="audio"></iframe>
-  <audio autoplay loop id="player">
-    <source src="audio/gura.mp3" type="audio/mp3">
-  </audio>
   <div class="index">
     <div class="background-video-wrap">
       <video src="" class="background-video" loop muted playsinline></video>
@@ -40,5 +36,18 @@
   </div>
   <script src="js/main.js"></script>
 </body>
+
+<script src="/js/audio5.min.js"></script>
+<script>
+  function initAudio () {
+    var audio5js = new Audio5js({
+      ready: function () {
+        this.load('/audio/gura.mp3');
+        this.play();
+      }
+    });
+  }
+  initAudio();
+</script>
 
 </html>
