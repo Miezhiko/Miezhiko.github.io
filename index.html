@@ -11,7 +11,7 @@
 </head>
 
 <body class="window-loading">
-  <div class="index">
+  <div class="index" id="index">
     <div class="background-video-wrap">
       <video src="" class="background-video" loop muted playsinline></video>
       <div class="video-cover"></div>
@@ -37,17 +37,24 @@
   <script src="js/main.js"></script>
 </body>
 
-<script src="/js/audio5.min.js"></script>
+<script src="js/audio5.min.js"></script>
 <script>
   function initAudio () {
     var audio5js = new Audio5js({
       ready: function () {
-        this.load('/audio/gura.mp3');
+        this.load('audio/gura.mp3');
         this.play();
       }
     });
   }
-  initAudio();
+  const body = document.getElementById('index');
+  var already = false;
+  body.addEventListener('mousedown', e => {
+    if (!already) {
+      already = true;
+      initAudio();
+    }
+  });
 </script>
 
 </html>
