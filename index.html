@@ -44,6 +44,10 @@
       ready: function () {
         this.load('audio/gura.mp3');
         this.play();
+
+        this.on('ended', function () {
+          this.play();
+        }, this);
       }
     });
   }
