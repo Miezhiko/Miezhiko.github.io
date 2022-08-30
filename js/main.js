@@ -9,7 +9,6 @@ window.onload = function () {
   var xhr = new XMLHttpRequest();
 
   xhr.open('GET', 'video/background-video.mp4', true);
-
   xhr.send();
 
   videoElement.src = "video/background-video.mp4";
