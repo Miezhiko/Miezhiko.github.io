@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miezhiko</title>
-  <link href="favicon.ico" rel="shortcut icon" />
-  <link rel="stylesheet" href="css/main.css">
-  <meta name="theme-color" content="#858584">
-</head>
-
 <body class="window-loading">
   <div class="index" id="index">
     <div class="background-video-wrap">
-      <video src class="background-video" loop muted playsinline></video>
+      <video src="" class="background-video" loop muted playsinline></video>
       <div class="video-cover"></div>
     </div>
     <div class="index__content">
@@ -31,14 +19,7 @@
         <div class="main-content">
 
           <div>
-          <ul>
-
-  <li>
-    <a href="./posts/2023-05-05-a.md.html">a</a><span> -  5 May 2023</span>
-  </li>
-
-</ul>
-
+          $partial("templates/post-list.html")$
           </div>
 
         </div>
@@ -51,30 +32,3 @@
   </script>
   <script src="js/main.js"></script>
 </body>
-
-
-<script src="js/audio5.min.js"></script>
-<script>
-  function initAudio () {
-    var audio5js = new Audio5js({
-      ready: function () {
-        this.load('audio/maris.mp3');
-        this.play();
-
-        this.on('ended', function () {
-          this.play();
-        }, this);
-      }
-    });
-  }
-  const body = document.getElementById('index');
-  var already = false;
-  body.addEventListener('mousedown', e => {
-    if (!already) {
-      already = true;
-      initAudio();
-    }
-  });
-</script>
-
-</html>

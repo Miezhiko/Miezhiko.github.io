@@ -1,0 +1,22 @@
+Name:               Miezhiko
+Version:            0.0.0
+Homepage:           http://Miezhiko.github.io
+Category:           Web
+Build-type:         Simple
+cabal-version:      2.0
+license:            AGPL-3
+
+Executable Miezhiko
+  Main-is:        Miezhiko.hs
+  ghc-options:
+    -Wall -threaded -rtsopts -with-rtsopts=-N
+  default-extensions:
+    CPP
+    LambdaCase
+    MultiWayIf
+    UnicodeSyntax
+  Hs-Source-Dirs: src
+  Build-depends:
+    base        >= 4.8,
+    hakyll      >= 4.16,
+    pandoc

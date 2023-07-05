@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miezhiko</title>
+  <link href="favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/main.css">
+  <meta name="theme-color" content="#858584">
+</head>
+
+$body$
+
+<script src="js/audio5.min.js"></script>
+<script>
+  function initAudio () {
+    var audio5js = new Audio5js({
+      ready: function () {
+        this.load('audio/maris.mp3');
+        this.play();
+
+        this.on('ended', function () {
+          this.play();
+        }, this);
+      }
+    });
+  }
+  const body = document.getElementById('index');
+  var already = false;
+  body.addEventListener('mousedown', e => {
+    if (!already) {
+      already = true;
+      initAudio();
+    }
+  });
+</script>
+
+</html>
