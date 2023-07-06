@@ -5,18 +5,27 @@
 
 import           Hakyll
 
+import           JS
+
 moveRoute ∷ String -> String -> Routes
 moveRoute p t = gsubRoute (p ++ "/") (const (t ++ "/"))
-                  `composeRoutes` setExtension "html"
+
+moveRouteHtml ∷ String -> String -> Routes
+moveRouteHtml p t = moveRoute p t
+                      `composeRoutes` setExtension "html"
 
 main ∷ IO ()
 main = hakyll $ do
   match "blog/*.md" $ do
-    route $ moveRoute "blog" "posts"
+    route $ moveRouteHtml "blog" "posts"
     compile $ pandocCompiler
       >>= loadAndApplyTemplate "templates/post.html"    pCtx
       >>= loadAndApplyTemplate "templates/default.html" pCtx
       >>= relativizeUrls
+
+  match (fromGlob "js/*.js" .&&. complement (fromGlob "js/*.min.js")) $ do
+    route $ customRoute (minifyJsRoute . toFilePath)
+    compile compressJsCompiler
 
   create ["index.html"] $ do
     route idRoute
