@@ -5,19 +5,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Miezhiko</title>
-  <link href="favicon.ico" rel="shortcut icon" />
-  <link rel="stylesheet" href="css/main.css">
+  <link href="/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="/css/main.css">
   <meta name="theme-color" content="#858584">
 </head>
 
-$body$
+<body class="window-loading">
 
-<script src="js/audio5.min.js"></script>
+<div class="index" id="index">
+
+<div id="logo">
+  <a href="/" id="abbr"></a>
+</div>
+
+$body$
+</div>
+
+</body>
+
+<script src="/js/auto.min.js"></script>
+<script src="/js/audio5.min.js"></script>
+<script src="/js/fairyDustCursor.min.js"></script>
+<script src="/js/main.min.js"></script>
 <script>
+  new fairyDustCursor({colors: ["#ff0000", "#ffaa00", "#00aaff", "#0000ff"]});
+  e = document.getElementById("abbr");setTimeout(r, 0);
   function initAudio () {
     var audio5js = new Audio5js({
       ready: function () {
-        this.load('audio/maris.mp3');
+        this.load('/audio/maris.mp3');
         this.play();
 
         this.on('ended', function () {

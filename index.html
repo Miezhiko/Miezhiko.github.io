@@ -5,33 +5,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Miezhiko</title>
-  <link href="favicon.ico" rel="shortcut icon" />
-  <link rel="stylesheet" href="css/main.css">
+  <link href="./favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="./css/main.css">
   <meta name="theme-color" content="#858584">
 </head>
 
 <body class="window-loading">
-  <div class="index" id="index">
-    <div class="background-video-wrap">
-      <video src class="background-video" loop muted playsinline></video>
-      <div class="video-cover"></div>
-    </div>
-    <div class="index__content">
-      <footer class="index__footer">
-        <div class="footer__city-social-wrap">
-            <div class="footer__social-links">
-              <a href="https://discord.gg/GdzjVvD" class="social-link" target="_blank">Discord</a>,
-              <a href="https://www.twitter.com/Miezhiko" class="social-link" target="_blank">Twitter</a>,
-              <a href="https://www.twitch.tv/Miezhiko" class="social-link" target="_blank">Twitch</a>,
-              <a href="https://github.com/Miezhiko" class="social-link" target="_blank">GitHub</a>,
-            </div>
-        </div>
-      </footer>
-      <main class="index__main">
-        <div class="main-content">
 
-          <div>
-          <ul>
+<div class="index" id="index">
+
+<div id="logo">
+  <a href="./" id="abbr"></a>
+</div>
+
+<div id="fof">
+  <div class="background-video-wrap">
+    <video src class="background-video" loop muted playsinline></video>
+    <div class="video-cover">
+    </div>
+  </div>
+  <canvas id="canvas"></canvas>
+</div>
+
+<div class="index__content">
+  <footer class="index__footer">
+    <div class="footer__city-social-wrap">
+        <div class="footer__social-links">
+          <a href="https://discord.gg/GdzjVvD" class="social-link" target="_blank">Discord</a>,
+          <a href="https://www.twitter.com/Miezhiko" class="social-link" target="_blank">Twitter</a>,
+          <a href="https://www.twitch.tv/Miezhiko" class="social-link" target="_blank">Twitch</a>,
+          <a href="https://github.com/Miezhiko" class="social-link" target="_blank">GitHub</a>,
+        </div>
+    </div>
+  </footer>
+  <main class="index__main">
+    <div class="main-content">
+
+      <div id="posts">
+      <ul>
 
   <li>
     <a href="./posts/2023-05-05-a.md.html">a</a><span> -  5 May 2023</span>
@@ -39,26 +50,29 @@
 
 </ul>
 
-          </div>
+      </div>
 
-        </div>
-      </main>
     </div>
-  </div>
-  <script src="js/fairyDustCursor.min.js"></script>
-  <script>
-    new fairyDustCursor({colors: ["#ff0000", "#ffaa00", "#00aaff", "#0000ff"]});
-  </script>
-  <script src="js/main.min.js"></script>
+  </main>
+</div>
+
+<script src="./js/eyes.min.js"></script>
+
+</div>
+
 </body>
 
-
-<script src="js/audio5.min.js"></script>
+<script src="./js/auto.min.js"></script>
+<script src="./js/audio5.min.js"></script>
+<script src="./js/fairyDustCursor.min.js"></script>
+<script src="./js/main.min.js"></script>
 <script>
+  new fairyDustCursor({colors: ["#ff0000", "#ffaa00", "#00aaff", "#0000ff"]});
+  e = document.getElementById("abbr");setTimeout(r, 0);
   function initAudio () {
     var audio5js = new Audio5js({
       ready: function () {
-        this.load('audio/maris.mp3');
+        this.load('/audio/maris.mp3');
         this.play();
 
         this.on('ended', function () {

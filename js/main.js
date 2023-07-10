@@ -8,10 +8,10 @@ window.onload = function () {
 
   var xhr = new XMLHttpRequest();
 
-  xhr.open('GET', 'video/background-video.mp4', true);
+  xhr.open('GET', '/video/background-video.mp4', true);
   xhr.send();
 
-  videoElement.src = "video/background-video.mp4";
+  videoElement.src = "/video/background-video.mp4";
 
   xhr.onprogress = function (event) {
     if (event.loaded * 100 / event.total >= 10) {
