@@ -117,6 +117,7 @@ video::-webkit-media-controls-start-playback-button {
 
 .index__main {
   position: relative;
+  z-index :100;
 }
 
 .logo {
@@ -280,6 +281,7 @@ footer a:hover {
     position: absolute;
     min-height: 100vh;
     height: 100%;
+    z-index: 100;
   }
 
   .background-video {
