@@ -184,6 +184,10 @@ footer a:hover {
   display: block;
 }
 
+.background-video-wrap {
+  z-index: 50;
+}
+
 @media (min-width: 1920px) {
   .btn {
     border-color: rgba(212, 32, 32, 0.5);
@@ -281,7 +285,6 @@ footer a:hover {
     position: absolute;
     min-height: 100vh;
     height: 100%;
-    z-index: 100;
   }
 
   .background-video {
@@ -371,7 +374,6 @@ footer a:hover {
 
   .background-video-wrap {
     position: relative;
-    z-index: 50;
   }
 
   .index__content {
