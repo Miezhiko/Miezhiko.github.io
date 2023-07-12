@@ -1,5 +1,5 @@
 Name:               Miezhiko
-Version:            0.0.0
+Version:            0.0.1
 Homepage:           http://Miezhiko.github.io
 Category:           Web
 Build-type:         Simple
@@ -10,6 +10,7 @@ Executable Miezhiko
   Main-is:        Miezhiko.hs
   other-modules:
     JS
+    CSS
   ghc-options:
     -Wall -threaded -rtsopts -with-rtsopts=-N
   default-extensions:
@@ -24,4 +25,5 @@ Executable Miezhiko
     text,
     bytestring,
     pandoc,
-    hjsmin
+    hjsmin,
+    clay

@@ -5,6 +5,7 @@
 
 import           Hakyll
 
+import           CSS
 import           JS
 
 moveRoute ∷ String -> String -> Routes
@@ -14,6 +15,9 @@ moveRouteHtml ∷ String -> String -> Routes
 moveRouteHtml p t = moveRoute p t
                       `composeRoutes` setExtension "html"
 
+runGHC ∷ Compiler (Item String)
+runGHC = getResourceString >>= withItemBody (unixFilter "runghc" [])
+
 main ∷ IO ()
 main = hakyll $ do
   match "blog/*.md" $ do
@@ -22,6 +26,14 @@ main = hakyll $ do
       >>= loadAndApplyTemplate "templates/post.html"    pCtx
       >>= loadAndApplyTemplate "templates/default.html" pCtx
       >>= relativizeUrls
+
+  match "css/*.hs" $ do
+    route $ setExtension "min.css"
+    compile $ fmap compressCss <$> runGHC
+
+  match (fromGlob "css/*.css" .&&. complement (fromGlob "css/*.min.css")) $ do
+    route $ customRoute (minifyCssRoute . toFilePath)
+    compile compressCssCompiler
 
   match (fromGlob "js/*.js" .&&. complement (fromGlob "js/*.min.js")) $ do
     route $ customRoute (minifyJsRoute . toFilePath)
