@@ -31,7 +31,7 @@
 			}, false );
 
 			eyes = [
-				new Eye( canvas,   0.50, 0.50,   5.00,    0.10 ),
+				new Eye( canvas,   0.50, 0.50,   4.00,    0.10 ),
 
 				new Eye( canvas,   0.19, 0.80,   0.88,    0.31 ),
 				new Eye( canvas,   0.10, 0.54,   0.84,    0.32 ),

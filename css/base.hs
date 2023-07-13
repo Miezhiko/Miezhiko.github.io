@@ -15,5 +15,12 @@ main = putCss $ do
                  height $ pct 100
                  width  $ pct 100
                  position absolute
-                 top    $ px 5
+                 top    nil
+                 left   nil
+
+  "#zzzvas" ? do zIndex 80
+                 height $ pct 100
+                 width  $ pct 100
+                 position absolute
+                 top    nil
                  left   nil

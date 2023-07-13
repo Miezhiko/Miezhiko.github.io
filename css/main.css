@@ -31,9 +31,9 @@ div#logo a {
   font-size :24px;
 }
 
+
 .window-loading {
   background-color: #fff;
-  opacity: 0;
 }
 
 .window-loaded {

@@ -114,14 +114,13 @@ window.onload = function () {
       videoElementWrap.style.backgroundColor = "rgb(230, 230, 230)";
     }
 
-
     if (event.loaded * 100 / event.total >= 10) {
       if (!partLoadingStatus) {
         setTimeout(() => {
           videoElementWrap.classList.add('video-playing');
           videoElement.play();
           partLoadingStatus = true;
-        }, 4000);
+        }, 3000);
       }
     }
   }
